@@ -17,8 +17,7 @@ class RegisterPage extends StatelessWidget {
             height: defaultSpacing * 2,
           ),
           Image(
-              width: 300, height: 200, image: AssetImage("assets/image2.png")
-              ),
+              width: 300, height: 200, image: AssetImage("assets/image2.png")),
           SizedBox(
             height: defaultSpacing * 5,
           ),
@@ -52,20 +51,21 @@ class RegisterPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width: 20,
+                  width: 15,
                   height: 10,
                   decoration: BoxDecoration(
-                      color: primaryDark,
+                      color: Colors.grey,
                       borderRadius: BorderRadius.circular(12)),
                 ),
+                
                 SizedBox(
                   width: 12,
                 ),
                 Container(
-                  width: 15,
+                  width: 20,
                   height: 10,
                   decoration: BoxDecoration(
-                      color: fontLight,
+                      color: primaryDark,
                       borderRadius: BorderRadius.circular(12)),
                 )
               ],
@@ -93,7 +93,8 @@ class RegisterPage extends StatelessWidget {
                   width: 140,
                   height: 60,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(defaultRadius)),
+                      borderRadius: BorderRadius.circular(defaultRadius)
+                      ),
                   child: ElevatedButton(
                     style: ButtonStyle(
                         shape:
