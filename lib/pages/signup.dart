@@ -1,4 +1,5 @@
 import 'package:apgar_app/constant/constant.dart';
+import 'package:apgar_app/pages/signpage.dart';
 import 'package:apgar_app/pages/succes_register.dart';
 import 'package:apgar_app/widgets/signup_textfield.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -48,7 +49,8 @@ class SignUp extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SuccessRegister()),
+                      MaterialPageRoute(
+                          builder: (context) => SuccessRegister()),
                     );
                   },
                   child: Text(
@@ -76,14 +78,20 @@ class SignUp extends StatelessWidget {
                   SizedBox(
                     width: 10.0,
                   ),
-                  Text(
-                    'Sign in',
-                    style: TextStyle(
-                      fontSize: defaultSpacing * 1.1,
-                      fontWeight: FontWeight.w700,
-                      color: primaryDark,
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SignPage()));
+                    },
+                    child: Text(
+                      'Sign in',
+                      style: TextStyle(
+                        fontSize: defaultSpacing * 1.1,
+                        fontWeight: FontWeight.w700,
+                        color: primaryDark,
+                      ),
                     ),
-                  ),
+                  )
                 ],
               )
             ],
