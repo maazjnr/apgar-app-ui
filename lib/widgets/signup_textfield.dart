@@ -54,26 +54,27 @@ class _SignUpTextFieldState extends State<SignUpTextField> {
                         width: 1,
                       ),
                       borderRadius: BorderRadius.circular(defaultRadius / 2)),
-                  child: DropdownButton<String>(
-                    onChanged: (item) => setState(() => selectedItem = item!),
-                    items: items
-                        .map((item) => DropdownMenuItem<String>(
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 20),
-                                child: Text(
-                                  item,
-                                  style: TextStyle(
-                                    fontSize: 16.0,
-                                    color: Colors.grey,
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton<String>(
+                      onChanged: (item) => setState(() => selectedItem = item!),
+                      items: items
+                          .map((item) => DropdownMenuItem<String>(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 10),
+                                  child: Text(
+                                    item,
+                                    style: TextStyle(
+                                      fontSize: 16.0,
+                                      color: Colors.grey,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              value: item,
-                              
-                            ))
-                        .toList(),
-                    alignment: Alignment.centerLeft ,
-                    value: selectedItem,
+                                value: item,
+                              ))
+                          .toList(),
+                      alignment: Alignment.centerLeft,
+                      value: selectedItem,
+                    ),
                   ),
                 ),
                 Container(

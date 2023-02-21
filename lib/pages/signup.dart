@@ -32,7 +32,11 @@ class SignUp extends StatelessWidget {
               SizedBox(
                 height: defaultSpacing,
               ),
+
+              //Registration Textfield Widget
               SignUpTextField(),
+              //Registration Textfield Widget
+              
               Container(
                 width: 330,
                 height: 60,

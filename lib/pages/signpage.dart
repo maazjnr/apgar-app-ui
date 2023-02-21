@@ -1,4 +1,5 @@
 import 'package:apgar_app/constant/constant.dart';
+import 'package:apgar_app/pages/retrieve_id.dart';
 import 'package:apgar_app/pages/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -46,12 +47,12 @@ class _SignPageState extends State<SignPage> {
                         color: primaryDark),
                   ),
                   SizedBox(
-                    height: defaultSpacing,
+                    height: defaultSpacing * 3,
                   ),
                   TextField(
                     controller: _addressTextController,
                     decoration: InputDecoration(
-                      hintText: 'Address',
+                      hintText: 'Hospital Name',
                       hintStyle: TextStyle(
                         color: Colors.grey,
                         fontSize: defaultSpacing,
@@ -65,9 +66,16 @@ class _SignPageState extends State<SignPage> {
                     ),
                   ),
                   SizedBox(
-                    height: defaultSpacing * 3,
+                    height: defaultSpacing * 1,
                   ),
                   SizedBox(
+                      child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RetrieveId() ),
+                      );
+                    },
                     child: Text(
                       'Forgot ID ?',
                       textAlign: TextAlign.left,
@@ -77,7 +85,7 @@ class _SignPageState extends State<SignPage> {
                         color: primaryDark,
                       ),
                     ),
-                  ),
+                  )),
                 ],
               ),
             ),
