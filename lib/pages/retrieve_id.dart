@@ -1,3 +1,5 @@
+import 'package:apgar_app/pages/signpage.dart';
+import 'package:apgar_app/pages/succes_retrieve_id.dart';
 import 'package:flutter/material.dart';
 
 import 'package:apgar_app/constant/constant.dart';
@@ -75,89 +77,93 @@ class _RetrieveIdState extends State<RetrieveId> {
                       ),
                     ),
                   ),
-
-                  SizedBox(height: defaultSpacing * 2,),
-
+                  SizedBox(
+                    height: defaultSpacing * 2,
+                  ),
                   Container(
                     child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  width: 200,
-                  height: 60,
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.grey,
-                        width: 1,
-                      ),
-                      borderRadius: BorderRadius.circular(defaultRadius / 2)),
-                  child: DropdownButtonHideUnderline(
-                    child: DropdownButton<String>(
-                      onChanged: (item) => setState(() => selectedItem = item!),
-                      items: items
-                          .map((item) => DropdownMenuItem<String>(
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 10),
-                                  child: Text(
-                                    item,
-                                    style: TextStyle(
-                                      fontSize: 16.0,
-                                      color: Colors.grey,
-                                    ),
-                                  ),
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          width: 200,
+                          height: 60,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.grey,
+                                width: 1,
+                              ),
+                              borderRadius:
+                                  BorderRadius.circular(defaultRadius / 2)),
+                          child: DropdownButtonHideUnderline(
+                            child: DropdownButton<String>(
+                              onChanged: (item) =>
+                                  setState(() => selectedItem = item!),
+                              items: items
+                                  .map((item) => DropdownMenuItem<String>(
+                                        child: Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 10),
+                                          child: Text(
+                                            item,
+                                            style: TextStyle(
+                                              fontSize: 16.0,
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                        ),
+                                        value: item,
+                                      ))
+                                  .toList(),
+                              alignment: Alignment.centerLeft,
+                              value: selectedItem,
+                            ),
+                          ),
+                        ),
+                        Container(
+                            width: 100,
+                            height: 60,
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey,
+                                  width: 1,
                                 ),
-                                value: item,
-                              ))
-                          .toList(),
-                      alignment: Alignment.centerLeft,
-                      value: selectedItem,
+                                borderRadius:
+                                    BorderRadius.circular(defaultRadius / 2)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 20),
+                              child: Text(
+                                'City',
+                                style: TextStyle(
+                                    fontSize: defaultRadius * 1.3,
+                                    color: Colors.grey),
+                                textAlign: TextAlign.center,
+                              ),
+                            )),
+                      ],
                     ),
                   ),
-                ),
-                Container(
-                    width: 100,
-                    height: 60,
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.grey,
-                          width: 1,
-                        ),
-                        borderRadius: BorderRadius.circular(defaultRadius / 2)),
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 20),
-                      child: Text(
-                        'City',
-                        style: TextStyle(
-                            fontSize: defaultRadius * 1.3, color: Colors.grey),
-                        textAlign: TextAlign.center,
-                      ),
-                    )),
-              ],
-            ),
-                  ),
-
-                 
                   SizedBox(
                     height: defaultSpacing * 1,
                   ),
                   SizedBox(
-                      child: TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => RetrieveId()),
-                      );
-                    },
-                    child: Text(
-                      'Sign in',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        fontSize: defaultSpacing,
-                        fontWeight: FontWeight.w400,
-                        color: primaryDark,
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignPage()),
+                        );
+                      },
+                      child: Text(
+                        'Sign in',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: defaultSpacing,
+                          fontWeight: FontWeight.w400,
+                          color: primaryDark,
+                        ),
                       ),
                     ),
-                  )),
+                  ),
                 ],
               ),
             ),
@@ -175,11 +181,12 @@ class _RetrieveIdState extends State<RetrieveId> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignUp()),
+                    MaterialPageRoute(
+                        builder: (context) => SuccessRetrieveId()),
                   );
                 },
                 child: Text(
-                  'Sign in',
+                  'Retrieve Id',
                   style: TextStyle(
                       fontSize: defaultSpacing * 1.1,
                       fontWeight: FontWeight.w400,
