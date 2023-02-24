@@ -1,7 +1,7 @@
 import 'package:apgar_app/constant/constant.dart';
 import 'package:apgar_app/pages/register_page.dart';
+import 'package:apgar_app/screens/home.dart';
 import 'package:flutter/material.dart';
-
 import '../data/onboarding.dart';
 
 class SkipPage extends StatelessWidget {
@@ -80,7 +80,10 @@ class SkipPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home()));
+                  },
                   child: Text(
                     'Skip',
                     style: TextStyle(

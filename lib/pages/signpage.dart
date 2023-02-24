@@ -1,6 +1,7 @@
 import 'package:apgar_app/constant/constant.dart';
 import 'package:apgar_app/pages/retrieve_id.dart';
 import 'package:apgar_app/pages/signup.dart';
+import 'package:apgar_app/screens/home.dart';
 import 'package:flutter/material.dart';
 
 class SignPage extends StatefulWidget {
@@ -103,7 +104,7 @@ class _SignPageState extends State<SignPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignUp()),
+                    MaterialPageRoute(builder: (context) => Home()),
                   );
                 },
                 child: Text(
