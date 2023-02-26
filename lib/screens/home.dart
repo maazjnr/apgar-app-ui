@@ -67,8 +67,7 @@ class Home extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.all(defaultSpacing),
-          child: CardContainer() ,
-          
+          child: CardContainer(),
         ),
       ]),
     );

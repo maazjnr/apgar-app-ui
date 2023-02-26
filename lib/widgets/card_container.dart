@@ -16,55 +16,82 @@ class CardContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: defaultSpacing),
+        Padding(
+          padding: const EdgeInsets.only(right: defaultSpacing * 10.5),
+          child: Text(
+            'Take APGAR score',
+            style: TextStyle(
+              fontSize: defaultSpacing * 1.4,
+              fontWeight: FontWeight.w600,
+              color: Color.fromARGB(255, 101, 101, 101),
+            ),
+            textAlign: TextAlign.left,
+          ),
+        ),
+        SizedBox(
+          height: defaultRadius / 1.3,
+        ),
         Container(
-          height: 200,
+          height: 280,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(defaultSpacing),
             image: DecorationImage(
-              image: AssetImage('assets/homeimg1.png'),
-              fit: BoxFit.cover,
-            ),
+                image: AssetImage('assets/homeimg1.png'), fit: BoxFit.cover),
           ),
           child: Column(children: [
             Spacer(),
             Container(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                      'Instantly input APGAR parameters and \n generate APGAR score of a new born baby'),
-                  ElevatedButton(
-                    style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(defaultRadius),
-                        )),
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(primaryDark)),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SignUp()),
-                      );
-                    },
-                    child: Text(
-                      'Sign in',
+              width: double.infinity,
+              height: 60,
+              decoration:
+                  BoxDecoration(color: Color.fromARGB(255, 227, 226, 226)),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 9),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Instantly input APGAR parameters\nandgenerate APGAR score of a new\nborn baby',
                       style: TextStyle(
-                          fontSize: defaultSpacing * 1.1,
-                          fontWeight: FontWeight.w400,
-                          color: secondaryLight),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          height: 1.3),
+                      textAlign: TextAlign.left,
                     ),
-                  ),
-                ],
+                    Container(
+                      height: 50,
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.circular(defaultRadius / 1.5),
+                            )),
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(primaryDark)),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SignUp()),
+                          );
+                        },
+                        child: Text(
+                          'Take a score',
+                          style: TextStyle(
+                              fontSize: defaultSpacing * 1.1,
+                              fontWeight: FontWeight.w400,
+                              color: secondaryLight),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             )
           ]),
-        )
+        ),
+        
+        
       ],
     );
   }
