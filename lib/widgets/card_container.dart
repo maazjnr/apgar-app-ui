@@ -90,8 +90,68 @@ class CardContainer extends StatelessWidget {
             )
           ]),
         ),
-        
-        
+        SizedBox(
+          height: defaultSpacing,
+        ),
+        Container(
+          height: 280,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(defaultSpacing),
+            image: DecorationImage(
+                image: AssetImage('assets/homeimg2.png'), fit: BoxFit.cover),
+          ),
+          child: Column(children: [
+            Spacer(),
+            Container(
+              width: double.infinity,
+              height: 60,
+              decoration:
+                  BoxDecoration(color: Color.fromARGB(255, 227, 226, 226)),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 9),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Easy access to APGAR\npast records',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          height: 1.3),
+                      textAlign: TextAlign.left,
+                    ),
+                    Container(
+                      height: 50,
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.circular(defaultRadius / 1.5),
+                            )),
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(primaryDark)),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SignUp()),
+                          );
+                        },
+                        child: Text(
+                          'Check Database',
+                          style: TextStyle(
+                              fontSize: defaultSpacing * 1.1,
+                              fontWeight: FontWeight.w400,
+                              color: secondaryLight),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ]),
+        ),
       ],
     );
   }
