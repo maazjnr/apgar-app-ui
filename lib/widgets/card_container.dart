@@ -91,6 +91,21 @@ class CardContainer extends StatelessWidget {
           ]),
         ),
         SizedBox(
+          height: defaultSpacing * 1.5,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(right: defaultSpacing * 10.5),
+          child: Text(
+            'Take APGAR score',
+            style: TextStyle(
+              fontSize: defaultSpacing * 1.4,
+              fontWeight: FontWeight.w600,
+              color: Color.fromARGB(255, 101, 101, 101),
+            ),
+            textAlign: TextAlign.left,
+          ),
+        ),
+        SizedBox(
           height: defaultSpacing,
         ),
         Container(
