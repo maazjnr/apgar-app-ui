@@ -164,7 +164,7 @@ class CardContainer extends StatelessWidget {
                   ],
                 ),
               ),
-            )
+            ),
           ]),
         ),
       ],

@@ -1,4 +1,7 @@
+import 'package:apgar_app/data/pastrecordsdata.dart';
 import 'package:flutter/material.dart';
+
+import '../constant/constant.dart';
 
 class PastRecords extends StatelessWidget {
   const PastRecords({super.key});
@@ -6,13 +9,31 @@ class PastRecords extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child:  Column(
+      child: Column(
         children: [
+          SizedBox(
+            height: defaultSpacing,
+          ),
           Row(
-            children: [],
-          )
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(defaultSpacing),
+                  image: DecorationImage(
+                      image: AssetImage('assets/homeimg1.png'),
+                      fit: BoxFit.cover),
+                ),
+                width: 150,
+                height: 150,
+                child: Text('Hello'),
+              )
+            ],
+          ),
+          SizedBox(
+            height: defaultSpacing,
+          ),
         ],
-      ) ,
+      ),
     );
   }
 }

@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../widgets/card_container.dart';
+import '../widgets/past_records.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -85,13 +86,17 @@ class _HomeState extends State<Home> {
             left: 0,
             right: 0,
             bottom: 0,
-            child: ListView(
-              children: [
-                SizedBox(
-                  height: 200,
-                ),
-                CardContainer()
-              ],
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: defaultSpacing),
+              child: ListView(
+                children: [
+                  SizedBox(
+                    height: 200,
+                  ),
+                  CardContainer(),
+                  PastRecords()
+                ],
+              ),
             ),
           ),
         ],
