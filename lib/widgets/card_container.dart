@@ -43,8 +43,13 @@ class CardContainer extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 60,
-              decoration:
-                  BoxDecoration(color: Color.fromARGB(255, 227, 226, 226)),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 227, 226, 226),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(defaultSpacing),
+                  bottomRight: Radius.circular(defaultSpacing),
+                ),
+              ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 9),
                 child: Row(
@@ -120,8 +125,13 @@ class CardContainer extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 60,
-              decoration:
-                  BoxDecoration(color: Color.fromARGB(255, 227, 226, 226)),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 227, 226, 226),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(defaultSpacing),
+                  bottomRight: Radius.circular(defaultSpacing),
+                ),
+              ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 9),
                 child: Row(

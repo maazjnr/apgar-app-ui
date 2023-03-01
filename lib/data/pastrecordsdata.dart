@@ -2,10 +2,10 @@
 
 class PastRecord {
   String idText;
-  int idScore;
+  String idScore;
   String scoreText;
   String image;
-  int numScored;
+  String numScored;
 
   PastRecord(
       {required this.idText,
@@ -18,26 +18,26 @@ class PastRecord {
 List<PastRecord> pastRecordData = [
   PastRecord(
       idText: 'ID',
-      idScore: 02,
+      idScore: '002',
       image: 'assets/homeimg1.png',
-      numScored: 08,
+      numScored: '08',
       scoreText: 'Score'),
   PastRecord(
       idText: 'ID',
-      idScore: 032,
+      idScore: '032',
       image: 'assets/homeimg1.png',
-      numScored: 09,
+      numScored: '09',
       scoreText: 'Score'),
   PastRecord(
       idText: 'ID',
-      idScore: 021,
+      idScore: '021',
       image: 'assets/homeimg1.png',
-      numScored: 04,
+      numScored: '04',
       scoreText: 'Score'),
   PastRecord(
       idText: 'ID',
-      idScore: 041,
+      idScore: '041',
       image: 'assets/homeimg1.png',
-      numScored: 02,
+      numScored: '02',
       scoreText: 'Score')
 ];
