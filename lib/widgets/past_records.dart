@@ -18,7 +18,7 @@ class PastRecords extends StatelessWidget {
           Text(
             'Past Records',
             style: TextStyle(
-              fontSize: defaultSpacing * 1.4,
+              fontSize: defaultSpacing * 1.2,
               fontWeight: FontWeight.w600,
               color: Color.fromARGB(255, 101, 101, 101),
             ),

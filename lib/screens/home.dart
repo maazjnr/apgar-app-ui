@@ -1,6 +1,7 @@
 import 'package:apgar_app/constant/constant.dart';
 import 'package:apgar_app/pages/signpage.dart';
 import 'package:apgar_app/screens/notification.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -22,6 +23,19 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: CurvedNavigationBar(
+        height: 45,
+          backgroundColor: secondaryLight,
+          color: primaryDark,
+          animationDuration: Duration(milliseconds: 300),
+          items: [
+            Icon(
+              Icons.home,
+              color: secondaryLight,
+            ),
+            Icon(Icons.favorite, color: secondaryLight),
+            Icon(Icons.settings, color: secondaryLight)
+          ]),
       appBar: AppBar(
         toolbarHeight: 60,
         backgroundColor: primaryDark,
