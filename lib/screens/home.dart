@@ -1,8 +1,9 @@
 import 'package:apgar_app/constant/constant.dart';
+import 'package:apgar_app/pages/signpage.dart';
+import 'package:apgar_app/screens/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-
 import '../widgets/card_container.dart';
 import '../widgets/past_records.dart';
 
@@ -21,35 +22,103 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          Positioned(
-            top: 50,
-            left: 0,
-            right: 0,
-            child: Container(
-              width: double.infinity,
-              height: defaultSpacing * 12,
-              decoration: BoxDecoration(color: primaryDark),
-              child: Padding(
-                padding: const EdgeInsets.all(defaultSpacing * 1.6),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(Icons.abc_outlined),
-                        Image.asset('assets/logo.png'),
-                        Icon(
+      appBar: AppBar(
+        toolbarHeight: 60,
+        backgroundColor: primaryDark,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: defaultSpacing * 2),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset(
+                    'assets/logo.png',
+                  ),
+                  Padding(
+                      padding:
+                          const EdgeInsets.only(left: defaultSpacing * 2.5),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: primaryDark,
+                          elevation: 0,
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NotificationPage()));
+                        },
+                        child: Icon(
                           Icons.notifications_outlined,
                           size: defaultSpacing * 2,
                           color: secondaryLight,
-                        )
-                      ],
+                        ),
+                      ))
+                ],
+              ),
+            ),
+          ],
+        ),
+        elevation: 0,
+      ),
+      drawer: SafeArea(
+        child: Drawer(
+          child: Column(
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: primaryDark,
+                ),
+                child: ListTile(
+                  title: Text(
+                    "Maaz Mapp",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
                     ),
-                    SizedBox(
-                      height: defaultSpacing * 2,
+                  ),
+                ),
+              ),
+              ListTile(
+                onTap: (() {}),
+                leading: const Icon(Icons.settings),
+                title: const Text(
+                  "Setting",
+                ),
+              ),
+              ListTile(
+                onTap: (() {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return const SignPage();
+                      },
                     ),
+                  );
+                }),
+                leading: const Icon(Icons.logout),
+                title: const Text(
+                  "Logout",
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              height: defaultSpacing * 6,
+              decoration: BoxDecoration(color: primaryDark),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 10, horizontal: defaultSpacing),
+                child: Column(
+                  children: [
                     Container(
                       decoration: BoxDecoration(
                           color: secondaryLight,
@@ -75,31 +144,22 @@ class _HomeState extends State<Home> {
                           // do something with the search query
                         },
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
             ),
-          ),
-          Positioned(
-            top: 100,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: defaultSpacing),
-              child: ListView(
-                children: [
-                  SizedBox(
-                    height: 200,
-                  ),
-                  CardContainer(),
-                  PastRecords()
-                ],
+            Expanded(
+                child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(defaultSpacing / 1.3),
+                child: Column(
+                  children: [CardContainer(), PastRecords()],
+                ),
               ),
-            ),
-          ),
-        ],
+            ))
+          ],
+        ),
       ),
     );
   }

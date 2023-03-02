@@ -26,15 +26,16 @@ class PastRecords extends StatelessWidget {
           SizedBox(
             height: defaultSpacing,
           ),
-          SingleChildScrollView (
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
             child: Row(
-              
               children: [
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(defaultSpacing),
                     image: DecorationImage(
-                        image: AssetImage('assets/baby1.png'), fit: BoxFit.cover),
+                        image: AssetImage('assets/baby1.png'),
+                        fit: BoxFit.cover),
                   ),
                   width: 180,
                   height: 170,
@@ -42,13 +43,15 @@ class PastRecords extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: defaultSpacing * 7, top: defaultSpacing / 1.8),
+                            left: defaultSpacing * 7,
+                            top: defaultSpacing / 1.8),
                         child: Container(
                           height: 50,
                           width: 50,
                           decoration: BoxDecoration(
                               color: Color.fromARGB(255, 227, 226, 226),
-                              borderRadius: BorderRadius.all(Radius.circular(5))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5))),
                           child: Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: Column(
@@ -110,14 +113,15 @@ class PastRecords extends StatelessWidget {
                     ],
                   ),
                 ),
-          
-                SizedBox(width: 20,),
-          
-                 Container(
+                SizedBox(
+                  width: 20,
+                ),
+                Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(defaultSpacing),
                     image: DecorationImage(
-                        image: AssetImage('assets/baby1.png'), fit: BoxFit.cover),
+                        image: AssetImage('assets/baby2.png'),
+                        fit: BoxFit.cover),
                   ),
                   width: 180,
                   height: 170,
@@ -125,25 +129,27 @@ class PastRecords extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: defaultSpacing * 7, top: defaultSpacing / 1.8),
+                            left: defaultSpacing * 7,
+                            top: defaultSpacing / 1.8),
                         child: Container(
                           height: 50,
                           width: 50,
                           decoration: BoxDecoration(
                               color: Color.fromARGB(255, 227, 226, 226),
-                              borderRadius: BorderRadius.all(Radius.circular(5))),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5))),
                           child: Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: Column(
                               children: [
                                 Text(
-                                  pastRecordData[0].idText,
+                                  pastRecordData[1].idText,
                                   style: TextStyle(
                                       fontSize: defaultSpacing,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Text(
-                                  pastRecordData[0].idScore,
+                                  pastRecordData[1].idScore,
                                   style: TextStyle(
                                       fontSize: defaultSpacing,
                                       fontWeight: FontWeight.bold,
@@ -170,14 +176,186 @@ class PastRecords extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    pastRecordData[0].scoreText,
+                                    pastRecordData[1].scoreText,
                                     style: TextStyle(
                                         fontSize: defaultSpacing * 1.2,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.grey),
                                   ),
                                   Text(
-                                    pastRecordData[0].numScored,
+                                    pastRecordData[1].numScored,
+                                    style: TextStyle(
+                                        fontSize: defaultSpacing,
+                                        fontWeight: FontWeight.bold,
+                                        color: primaryDark),
+                                  ),
+                                ],
+                              ),
+                              Icon(Icons.more_vert_outlined)
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(defaultSpacing),
+                    image: DecorationImage(
+                        image: AssetImage('assets/baby3.png'),
+                        fit: BoxFit.cover),
+                  ),
+                  width: 180,
+                  height: 170,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: defaultSpacing * 7,
+                            top: defaultSpacing / 1.8),
+                        child: Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 227, 226, 226),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5))),
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Column(
+                              children: [
+                                Text(
+                                  pastRecordData[2].idText,
+                                  style: TextStyle(
+                                      fontSize: defaultSpacing,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  pastRecordData[2].idScore,
+                                  style: TextStyle(
+                                      fontSize: defaultSpacing,
+                                      fontWeight: FontWeight.bold,
+                                      color: primaryDark),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Spacer(),
+                      Container(
+                        width: double.infinity,
+                        height: 60,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 227, 226, 226),
+                            borderRadius: BorderRadius.all(Radius.circular(5))),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    pastRecordData[2].scoreText,
+                                    style: TextStyle(
+                                        fontSize: defaultSpacing * 1.2,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.grey),
+                                  ),
+                                  Text(
+                                    pastRecordData[2].numScored,
+                                    style: TextStyle(
+                                        fontSize: defaultSpacing,
+                                        fontWeight: FontWeight.bold,
+                                        color: primaryDark),
+                                  ),
+                                ],
+                              ),
+                              Icon(Icons.more_vert_outlined)
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(defaultSpacing),
+                    image: DecorationImage(
+                        image: AssetImage('assets/baby4.png'),
+                        fit: BoxFit.cover),
+                  ),
+                  width: 180,
+                  height: 170,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: defaultSpacing * 7,
+                            top: defaultSpacing / 1.8),
+                        child: Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 227, 226, 226),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5))),
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Column(
+                              children: [
+                                Text(
+                                  pastRecordData[3].idText,
+                                  style: TextStyle(
+                                      fontSize: defaultSpacing,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  pastRecordData[3].idScore,
+                                  style: TextStyle(
+                                      fontSize: defaultSpacing,
+                                      fontWeight: FontWeight.bold,
+                                      color: primaryDark),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Spacer(),
+                      Container(
+                        width: double.infinity,
+                        height: 60,
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 227, 226, 226),
+                            borderRadius: BorderRadius.all(Radius.circular(5))),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    pastRecordData[3].scoreText,
+                                    style: TextStyle(
+                                        fontSize: defaultSpacing * 1.2,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.grey),
+                                  ),
+                                  Text(
+                                    pastRecordData[3].numScored,
                                     style: TextStyle(
                                         fontSize: defaultSpacing,
                                         fontWeight: FontWeight.bold,

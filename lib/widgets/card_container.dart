@@ -2,9 +2,7 @@ import 'package:apgar_app/constant/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-
 import 'package:flutter/material.dart';
-
 import '../pages/signup.dart';
 
 class CardContainer extends StatelessWidget {
@@ -15,13 +13,14 @@ class CardContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.only(right: defaultSpacing * 10.5),
           child: Text(
             'Take APGAR score',
             style: TextStyle(
-              fontSize: defaultSpacing * 1.4,
+              fontSize: defaultSpacing * 1.1,
               fontWeight: FontWeight.w600,
               color: Color.fromARGB(255, 101, 101, 101),
             ),
@@ -101,9 +100,9 @@ class CardContainer extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(right: defaultSpacing * 10.5),
           child: Text(
-            'Take APGAR score',
+            'Check APGAR Database',
             style: TextStyle(
-              fontSize: defaultSpacing * 1.4,
+              fontSize: defaultSpacing * 1.1,
               fontWeight: FontWeight.w600,
               color: Color.fromARGB(255, 101, 101, 101),
             ),
