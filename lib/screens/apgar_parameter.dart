@@ -101,7 +101,6 @@ class _ApgarParameterState extends State<ApgarParameter> {
                             ))
                         .toList(),
                     alignment: Alignment.centerLeft,
-                    value: selectedItem,
                   ),
                 ),
               ),
@@ -145,7 +144,6 @@ class _ApgarParameterState extends State<ApgarParameter> {
                             ))
                         .toList(),
                     alignment: Alignment.centerLeft,
-                    value: selectedItem,
                   ),
                 ),
               ),
@@ -189,7 +187,6 @@ class _ApgarParameterState extends State<ApgarParameter> {
                             ))
                         .toList(),
                     alignment: Alignment.centerLeft,
-                    value: selectedItem,
                   ),
                 ),
               ),
@@ -233,49 +230,44 @@ class _ApgarParameterState extends State<ApgarParameter> {
                             ))
                         .toList(),
                     alignment: Alignment.centerLeft,
-                    value: selectedItem,
                   ),
                 ),
               ),
-              SizedBox(height: defaultSpacing * 2,),
-                              Container(
-                  width: double.infinity,
-                  height: 60,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(defaultRadius)
-                      ),
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(defaultRadius),
-                        )),
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(primaryDark)),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ApgarScore()),
-                      );
-                    },
-                    child: Text(
-                      'Take Score',
-                      style: TextStyle(
-                          fontSize: defaultSpacing * 1.1,
-                          fontWeight: FontWeight.w400,
-                          color: secondaryLight),
-                    ),
+              SizedBox(
+                height: defaultSpacing * 2,
+              ),
+              Container(
+                width: double.infinity,
+                height: 60,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(defaultRadius)),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(defaultRadius),
+                      )),
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(primaryDark)),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ApgarScore()),
+                    );
+                  },
+                  child: Text(
+                    'Take Score',
+                    style: TextStyle(
+                        fontSize: defaultSpacing * 1.1,
+                        fontWeight: FontWeight.w400,
+                        color: secondaryLight),
                   ),
-                )
+                ),
+              )
             ],
           ),
         ),
-
-
-        
-      ]
-      ),
+      ]),
     );
   }
 }
