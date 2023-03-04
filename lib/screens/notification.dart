@@ -2,6 +2,8 @@ import 'package:apgar_app/constant/constant.dart';
 import 'package:apgar_app/widgets/new_notification.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/earlieNot.dart';
+
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});
 
@@ -63,6 +65,24 @@ class NotificationPage extends StatelessWidget {
             height: defaultSpacing * 1.5,
           ),
           NewNotification(),
+
+           Padding(
+            padding: const EdgeInsets.only(
+                top: defaultSpacing * 2, left: defaultSpacing, bottom: 5),
+            child: Text(
+              'Earlier Notifications',
+              style:
+                  TextStyle(color: primaryDark, fontSize: defaultSpacing * 1.2),
+            ),
+          ),
+          Container(
+            height: 1,
+            width: double.infinity,
+            decoration:
+                BoxDecoration(color: Color.fromARGB(255, 214, 212, 212)),
+          ),
+
+          EarlierNotification()
         ],
       ),
     );
