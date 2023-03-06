@@ -71,7 +71,7 @@ class _ApgarParameterState extends State<ApgarParameter> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: 8.0,
+                height: 8.2,
               ),
               Container(
                 width: double.infinity,
