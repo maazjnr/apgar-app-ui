@@ -18,8 +18,8 @@ class ApgarScore extends StatelessWidget {
                 height: defaultSpacing * 10,
               ),
               Container(
-                width: 310,
-                height: 400,
+                width: 290,
+                height: 350,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(defaultSpacing * 1.2),
                   color: Colors.white,
@@ -85,6 +85,73 @@ class ApgarScore extends StatelessWidget {
                 ),
               ),
               Padding(
+                padding: const EdgeInsets.all(defaultSpacing * 2),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        side: MaterialStateProperty.all(
+                          BorderSide(
+                            color: Colors
+                                .blue, // specify your desired border color here
+                            width: 2, // specify the width of the border
+                          ),
+                        ),
+                        minimumSize: MaterialStateProperty.all(Size(140, 50)),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.circular(defaultRadius / 2),
+                          ),
+                        ),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(secondaryLight),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignUp()),
+                        );
+                      },
+                      child: Text(
+                        'Skip to record',
+                        style: TextStyle(
+                            fontSize: defaultSpacing / 1.2,
+                            fontWeight: FontWeight.w400,
+                            color: primaryDark),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                          minimumSize: MaterialStateProperty.all(Size(140, 50)),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.circular(defaultRadius / 2),
+                          )),
+                          backgroundColor:
+                              MaterialStateProperty.all<Color>(primaryDark)),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignUp()),
+                        );
+                      },
+                      child: Text(
+                        'Add material record',
+                        style: TextStyle(
+                            fontSize: defaultSpacing / 1.2,
+                            fontWeight: FontWeight.w400,
+                            color: secondaryLight),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
                 padding: const EdgeInsets.only(
                     left: defaultSpacing * 2.6, top: defaultSpacing),
                 child: Row(
@@ -93,49 +160,25 @@ class ApgarScore extends StatelessWidget {
                       Icons.warning_amber_outlined,
                       color: Colors.redAccent,
                     ),
-                    Text(
-                      'Keep ID safe',
-                      style: TextStyle(
-                        fontSize: defaultRadius * 1.3,
-                        color: Colors.redAccent,
-                        fontWeight: FontWeight.w400,
+                    Padding(
+                      padding: const EdgeInsets.only(left: defaultSpacing / 2),
+                      child: Text(
+                        'Adding maternal record is an added advanatage',
+                        style: TextStyle(
+                          fontSize: defaultRadius,
+                          color: Colors.redAccent,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(defaultSpacing * 2),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                      minimumSize: MaterialStateProperty.all(Size(160, 60)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                      )),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(primaryDark)),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SignUp()),
-                    );
-                  },
-                  child: Text(
-                    'Continue',
-                    style: TextStyle(
-                        fontSize: defaultSpacing * 1.1,
-                        fontWeight: FontWeight.w400,
-                        color: secondaryLight),
-                  ),
                 ),
               ),
             ],
           ),
         ),
       ),
-       
     );
   }
 }
