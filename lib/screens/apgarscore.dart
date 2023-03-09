@@ -109,12 +109,7 @@ class ApgarScore extends StatelessWidget {
                         backgroundColor:
                             MaterialStateProperty.all<Color>(secondaryLight),
                       ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SignUp()),
-                        );
-                      },
+                      onPressed: () {},
                       child: Text(
                         'Skip to record',
                         style: TextStyle(
@@ -134,12 +129,7 @@ class ApgarScore extends StatelessWidget {
                           )),
                           backgroundColor:
                               MaterialStateProperty.all<Color>(primaryDark)),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SignUp()),
-                        );
-                      },
+                      onPressed: () {},
                       child: Text(
                         'Add material record',
                         style: TextStyle(

@@ -1,5 +1,6 @@
 import 'package:apgar_app/constant/constant.dart';
 import 'package:apgar_app/pages/signpage.dart';
+import 'package:apgar_app/screens/apgar_database.dart';
 import 'package:apgar_app/screens/apgar_parameter.dart';
 import 'package:apgar_app/screens/favorite.dart';
 import 'package:apgar_app/screens/notification.dart';
@@ -85,39 +86,42 @@ class _HomeState extends State<Home> {
                   color: primaryDark,
                 ),
                 child: ListTile(
-                    title: Padding(
-                        padding: const EdgeInsets.only(top: 20),
-                        child: CircleAvatar(
-                          backgroundImage: AssetImage('assets/baby1.png'),
-                          radius: defaultSpacing * 3,
-                          child: Text(
-                            '96',
-                            style: TextStyle(
-                                fontSize: defaultSpacing * 2,
-                                fontWeight: FontWeight.bold,
-                                shadows: [
-                                  Shadow(
-                                    offset:
-                                        Offset(2.0, 2.0), //position of shadow
-                                    blurRadius: 6.0, //blur intensity of shadow
-                                    color: Color.fromARGB(255, 153, 153, 153)
-                                        .withOpacity(
-                                            0.8), //color of shadow with opacity
-                                  ),
+                  title: Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/baby1.png'),
+                      radius: defaultSpacing * 3,
+                      child: Text(
+                        '96',
+                        style: TextStyle(
+                            fontSize: defaultSpacing * 2,
+                            fontWeight: FontWeight.bold,
+                            shadows: [
+                              Shadow(
+                                offset: Offset(2.0, 2.0), //position of shadow
+                                blurRadius: 6.0, //blur intensity of shadow
+                                color: Color.fromARGB(255, 153, 153, 153)
+                                    .withOpacity(
+                                        0.8), //color of shadow with opacity
+                              ),
 
-                                  //add more shadow with different position offset here
-                                ],
-                                color: secondaryLight),
-                          ),
-                        ))),
+                              //add more shadow with different position offset here
+                            ],
+                            color: secondaryLight),
+                      ),
+                    ),
+                  ),
+                ),
               ),
               SizedBox(
                 height: defaultSpacing * 3,
               ),
               ListTile(
                 onTap: (() {
-                  Navigator.push(context, 
-                  MaterialPageRoute(builder: (context) => ApgarParameter()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ApgarParameter()));
                 }),
                 leading: const Icon(
                   Icons.my_library_books,
@@ -133,7 +137,7 @@ class _HomeState extends State<Home> {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
                       builder: (BuildContext context) {
-                        return const SignPage();
+                        return const ApgarDatabase();
                       },
                     ),
                   );
