@@ -28,35 +28,81 @@ class DataBaseCard extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(defaultSpacing),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Hello'),
+                          Column(
+                            children: [
+                              Text(
+                                '004',
+                                style: TextStyle(
+                                    fontSize: defaultSpacing * 1.5,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black45),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Text(
+                                'ID',
+                                style: TextStyle(
+                                    fontSize: defaultSpacing,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black45),
+                              ),
+                            ],
+                          ),
                         ],
+                      ),
+                      SizedBox(
+                        height: defaultSpacing,
                       ),
                       Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Hello'),
+                          Container(
+                            child: Text(
+                              '23/10/2020',
+                              style: TextStyle(
+                                  fontSize: defaultSpacing,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black45),
+                            ),
+                          ),
+                          Container(
+                            child: Text(
+                              '12:23am',
+                              style: TextStyle(
+                                  fontSize: defaultSpacing,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black45),
+                            ),
+                          ),
                         ],
-                      ),
+                      )
                     ],
                   ),
 
-                  SizedBox(height: defaultSpacing,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        child: Text('Container'),
+                  SizedBox(height: defaultRadius / 1.5,),
+                  Container(
+                    width: 70,
+                    height: 70,
+                    
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(defaultRadius / 1.5),
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/baby1.png', 
+                        ),
                       ),
-
-                       Container(
-                        child: Text('Container'),
-                      ),
-                    ],
+                    ),
+                    
                   )
                 ],
               ),
