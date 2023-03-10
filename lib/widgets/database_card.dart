@@ -18,9 +18,9 @@ class DataBaseCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.2),
+                  color: Colors.grey.withOpacity(0.1),
                   spreadRadius: 2,
-                  blurRadius: 7,
+                  blurRadius: 5,
                   offset: Offset(0, 1),
                 ),
               ],
@@ -88,21 +88,30 @@ class DataBaseCard extends StatelessWidget {
                       )
                     ],
                   ),
-
-                  SizedBox(height: defaultRadius / 1.5,),
+                  SizedBox(
+                    height: defaultRadius / 1.2,
+                  ),
                   Container(
-                    width: 70,
-                    height: 70,
-                    
+                    width: double.infinity,
+                    height: 0.3,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 199, 199, 199),
+                    ),
+                  ),
+                  SizedBox(
+                    height: defaultRadius,
+                  ),
+                  Container(
+                    width: 90,
+                    height: 90,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(defaultRadius / 1.5),
                       image: DecorationImage(
                         image: AssetImage(
-                          'assets/baby1.png', 
+                          'assets/baby1.png',
                         ),
                       ),
                     ),
-                    
                   )
                 ],
               ),
