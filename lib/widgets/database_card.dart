@@ -99,7 +99,7 @@ class DataBaseCard extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: defaultRadius,
+                    height: defaultSpacing,
                   ),
                   Container(
                     width: 90,
