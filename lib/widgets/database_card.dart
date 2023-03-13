@@ -15,10 +15,10 @@ class DataBaseCard extends StatelessWidget {
             height: 200,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(11),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.1),
+                  color: Color.fromARGB(255, 120, 119, 119).withOpacity(0.1),
                   spreadRadius: 2,
                   blurRadius: 5,
                   offset: Offset(0, 1),
