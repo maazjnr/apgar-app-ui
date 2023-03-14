@@ -101,18 +101,42 @@ class DataBaseCard extends StatelessWidget {
                   SizedBox(
                     height: defaultSpacing,
                   ),
-                  Container(
-                    width: 90,
-                    height: 90,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(defaultRadius / 1.5),
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/baby1.png',
+                  Row(
+                    children: [
+                      Container(
+                        width: 90,
+                        height: 90,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(defaultRadius / 1.5),
+                          image: DecorationImage(
+                            image: AssetImage(
+                              'assets/baby1.png',
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  )
+
+                      Column(
+                        children: [
+                          Text(
+                                  'Score',
+                                  style: TextStyle(
+                                      fontSize: defaultSpacing,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black45),
+                                ),
+
+                                Text(
+                              '12:23am',
+                              style: TextStyle(
+                                  fontSize: defaultSpacing,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black45),
+                            ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ), // Your content here
